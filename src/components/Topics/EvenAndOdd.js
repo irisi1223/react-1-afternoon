@@ -18,10 +18,10 @@ class EvenAndOdd extends Component{
 
         for(let i = 0; i < arr.length; i++){
             if(arr[i] % 2 === 0){
-                evens.push(parseInt(arr[I], 10))
+                evens.push(arr[i])
                 
             }else {
-                odds.push(parseInt(arr[i], 10))
+                odds.push(arr[i])
             }
         }
         this.setState({evenArray: evens, oddArray: odds})

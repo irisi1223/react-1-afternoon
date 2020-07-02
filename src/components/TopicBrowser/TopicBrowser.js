@@ -8,7 +8,7 @@ import Sum from '../Topics/Sum'
     class TopicBrowser extends Component {
        render() {
         return(
-            <div className= 'App'>
+            <div className='App'>
                 <EvenAndOdd />
                 <FilterObject />
                 <FilterString />

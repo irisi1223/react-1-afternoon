@@ -35,7 +35,7 @@ class FilterObject extends Component{
         let cars = this.state.cars;
         let filteredCars = [];
 
-        for ( let i = 0; i < employees.length; i++ ) {
+        for ( let i = 0; i < cars.length; i++ ) {
             if ( cars[i].hasOwnProperty(prop) ) {
               filteredCars.push(cars[i]);
             }

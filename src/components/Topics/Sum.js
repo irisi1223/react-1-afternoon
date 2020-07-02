@@ -28,13 +28,13 @@ class Sum extends Component{
 
     render(){
         return(
-            <div className = 'puzzleBox sumPB'>
+            <div className='puzzleBox sumPB'>
                 <h4> Sum </h4>
-                <input className = 'inputLine' type = 'number' onChange = { (e) => this.updateNum1(e.target.val)}/>
-                <input className = 'inputLine' type = 'number' onChange = { (e) => this.updateNum2(e.target.value)}/>
-                <button className = 'confirmationButton' onClick = {
+                <input className='inputLine' type='number' onChange={ (e) => this.updateNum1(e.target.val)}/>
+                <input className='inputLine' type='number' onChange={ (e) => this.updateNum2(e.target.value)}/>
+                <button className='confirmationButton' onClick={
                     () => this.add(this.state.num1, this.state.num2)}> Add </button>
-                <span className = 'resultsBox'></span>
+                <span className='resultsBox'></span>
             </div>
         )
     }

@@ -19,7 +19,7 @@ class Palindrome extends Component{
         backWards = backWards.join('')
 
 
-        if(forWards === backwards){
+        if(forWards === backWards){
             this.setState({palindrom: 'true'})
         }else{
             this.setState({palindrome: 'false'})
@@ -30,9 +30,9 @@ class Palindrome extends Component{
         return(
             <div>
                 <h4>Palindrom</h4>
-                <input className = 'inputLine' onChange = {(e) => this.handleChange(e.target.value)}/>
-                <button className = 'confirmationButton' onClick = {() => this.isPalindrom(this.state.userInput)}> Check </button>
-                <span className = 'resultsBox'>Palindrom: { this.state.palindrome}</span>
+                <input className='inputLine' onChange={(e) => this.handleChange(e.target.value)}/>
+                <button className='confirmationButton' onClick={() => this.isPalindrom(this.state.userInput)}> Check </button>
+                <span className='resultsBox'>Palindrom: { this.state.palindrome}</span>
             </div>
         )
     }

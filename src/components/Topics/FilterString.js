@@ -28,12 +28,12 @@ class FilterString extends Component{
     
     render(){
         return(
-            <div className= 'puzzleBox filterStringPB'>
+            <div className='puzzleBox filterStringPB'>
                 <h4>Filter String</h4>
-                <span className= 'puzzleText'> Drinks: { JSON.stringify(this.state.drinks, null, 10)}</span>
-                <input className= 'inputLine' onChange= {(e) => this.handleChange(e.target.value)}/>
-                <button className= 'confirmationButton' onClick={ () => this.state.filteredDrinks(this.state.userInput)}>Filter</button>
-                <span className= 'resultsBox filterStringRB'>Filtered Drinks: { JSON.stringify(this.state.filterdDrinks, null, 10)}</span>
+                <span className='puzzleText'> Drinks: { JSON.stringify(this.state.drinks, null, 10)}</span>
+                <input className='inputLine' onChange={(e) => this.handleChange(e.target.value)}/>
+                <button className='confirmationButton' onClick={ () => this.state.filteredDrinks(this.state.userInput)}>Filter</button>
+                <span className='resultsBox filterStringRB'>Filtered Drinks: { JSON.stringify(this.state.filterdDrinks, null, 10)}</span>
             </div>
         );
     }
