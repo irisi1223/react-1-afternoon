@@ -8,20 +8,21 @@ class EvenAndOdd extends Component{
             userInput: ''
         }
     }
-    handleInput(val){
+    handleChange(val){
         this.setState({ userInput: val});
     }
     assignEvenAndOdds(userInput) {
         let arr = userInput.split(",");
         let evens= [];
         let odds= [];
-
+console.log(arr)
         for(let i = 0; i < arr.length; i++){
+            console.log(arr[i])
             if(arr[i] % 2 === 0){
-                evens.push(arr[i])
+                evens.push(+arr[i])
                 
             }else {
-                odds.push(arr[i])
+                odds.push(+arr[i])
             }
         }
         this.setState({evenArray: evens, oddArray: odds})

@@ -9,12 +9,14 @@ class FilterString extends Component{
         };
     }
 
-    handleChange(val){
+    handleChange = (val) =>{
         this.setState({ userInput: val});
     }
 
-    filterdDrinks(userInput){
+    filteredDrinks = (userInput) => {
+        console.log(userInput)
         let drinks = this.state.drinks;
+        console.log(drinks)
         let filteredDrinks = [];
 
         for(let i = 0; i< drinks.length; i++){
@@ -32,7 +34,7 @@ class FilterString extends Component{
                 <h4>Filter String</h4>
                 <span className='puzzleText'> Drinks: { JSON.stringify(this.state.drinks, null, 10)}</span>
                 <input className='inputLine' onChange={(e) => this.handleChange(e.target.value)}/>
-                <button className='confirmationButton' onClick={ () => this.state.filteredDrinks(this.state.userInput)}>Filter</button>
+                <button className='confirmationButton' onClick={ () => this.filteredDrinks(this.state.userInput)}>Filter</button>
                 <span className='resultsBox filterStringRB'>Filtered Drinks: { JSON.stringify(this.state.filterdDrinks, null, 10)}</span>
             </div>
         );
